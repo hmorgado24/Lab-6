@@ -1,4 +1,3 @@
-import time
 from shiftregisterclass import Shifter    # extend by composition
 
 class LEDdisplay():
@@ -18,7 +17,7 @@ class LEDdisplay():
     0b11100110] # 9
 
   def __init__(self, data, latch, clock):
-    self.shifter = Shifter(data, latch, clock)
+    self.Shifter = Shifter(data, latch, clock)
  
   def setNumber(self, num):  # display a given number
-    self.shifter.shiftByte(LEDdisplay.numbers[num])
+    self.Shifter.shiftByte(LEDdisplay.numbers[num])
