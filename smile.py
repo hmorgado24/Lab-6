@@ -12,4 +12,3 @@ while True:
   for n in range(len(pattern)):
 
     leddisp.shiftByte(pattern[n])
-    time.sleep(.4)
