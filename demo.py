@@ -12,7 +12,7 @@ dataPin, latchPin, clockPin = 21, 26, 19
 # Pick a number sequence
 sequence = [8, 6, 7, 5, 3, 0, 9]
 
-theLEDdisplay= LEDdisplay(dataPin, latchPin, clockPin)
+theLEDdisplay = LEDdisplay(dataPin, latchPin, clockPin)
 
 while True:
   for n in range(len(sequence)):
