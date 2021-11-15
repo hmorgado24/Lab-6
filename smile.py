@@ -9,5 +9,7 @@ pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001,
 0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
 while True:
-  leddisp.shiftByte(pattern)
-  time.sleep(.4)
+  for n in range(len(pattern)):
+
+    leddisp.shiftByte(pattern[n])
+    time.sleep(.4)
