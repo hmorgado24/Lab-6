@@ -22,6 +22,3 @@ class LEDdisplay():
  
   def setNumber(self, num):  # display a given number
     self.shifter.shiftByte(LEDdisplay.numbers[num])
-  
-  def setrowcol(self, ):
-    

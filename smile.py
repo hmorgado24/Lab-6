@@ -1,5 +1,5 @@
 from ledclass import led
 
-data, latch, clock = 19, 26, 21
+data, latch, clock = 21, 19, 26
 
 
