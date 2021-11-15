@@ -7,12 +7,11 @@ from led8x8 import LEDdisplay
 # is done through the LEDdisplay class (we do however need
 # to define the GPIO pins, since LEDdisplay is
 # pin-agnostic).
-gpio.cleanup()
 
 dataPin, latchPin, clockPin = 21, 26, 19
 
 # Pick a number sequence
-sequence = [8, 6, 7, 5, 3, 0, 9]
+sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 theLEDdisplay= LEDdisplay(dataPin, latchPin, clockPin)
 
@@ -20,3 +19,5 @@ while True:
   for n in range(len(sequence)):
     theLEDdisplay.setNumber(sequence[n])
     time.sleep(0.4)
+
+gpio.cleanup()
