@@ -1,5 +1,5 @@
 import time
-from shifter import Shifter    # extend by composition
+from shifterregisterclass import shifter    # extend by composition
 
 class LEDdisplay():
 
