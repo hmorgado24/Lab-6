@@ -7,6 +7,7 @@ from led8x8 import LEDdisplay
 # is done through the LEDdisplay class (we do however need
 # to define the GPIO pins, since LEDdisplay is
 # pin-agnostic).
+gpio.cleanup()
 
 dataPin, latchPin, clockPin = 21, 26, 19
 
