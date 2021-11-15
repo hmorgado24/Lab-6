@@ -20,5 +20,3 @@ while True:
   for n in range(len(sequence)):
     theLEDdisplay.setNumber(sequence[n])
     time.sleep(0.4)
-
-gpio.cleanup()
