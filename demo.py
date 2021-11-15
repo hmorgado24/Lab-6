@@ -1,5 +1,5 @@
 import time
-import RPI.GPIO as gpio
+import RPi.GPIO as gpio
 from led8x8 import LEDdisplay
 
 # Simple demonstration of the LEDdisplay class.
