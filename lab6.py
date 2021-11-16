@@ -11,7 +11,8 @@ def lightningbug(data, latch, clock):
   co = random.randint(0, 7)
 
   leddisp = led(data, latch, clock)
-
+  time.sleep(.01)
+  
   while True:
     Rrow = random.randint(-1, 1)
     Rcol = random.randint(-1, 1)
@@ -26,8 +27,7 @@ def lightningbug(data, latch, clock):
       co = co
     else:
       co += Rcol
-    
-    time.sleep(.01)
+
 
 # def multiA():
 
