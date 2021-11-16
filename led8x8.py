@@ -2,23 +2,13 @@ from shiftregisterclass import Shifter    # extend by composition
 
 class LEDdisplay():
 
-  'Class for controlling a 7-segment LED display'
+  rows = [0b10000000, 0b01000000, 0b00100000, 0b00010000, 0b00001000, 0b00000100, 0b00000010, 0b00000001]
 
-  numbers = [ 
-    0b11111100, # 0
-    0b01100000, # 1
-    0b11011010, # 2
-    0b11110010, # 3
-    0b01100110, # 4
-    0b10110110, # 5
-    0b10111110, # 6
-    0b11100000, # 7
-    0b11111110, # 8
-    0b11100110] # 9
+  pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001, 0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
   def __init__(self, data, latch, clock):
     self.Shifter = Shifter(data, latch, clock)
  
-  def setNumber(self, num):  # display a given number
-    self.Shifter.shiftByte(LEDdisplay.numbers[num])
-
+  def display(self, num):  # display a given number
+    self.Shifter.shiftByte(LEDdisplay.rows[num])
+    self.Shifter.shiftByte(LEDdisplay.pattern[num])
