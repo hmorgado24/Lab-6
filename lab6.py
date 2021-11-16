@@ -37,7 +37,7 @@ def multiA():
 multi = multiprocessing.Process(target=multiA)
 multi.start
 
-p = multiprocessing.Process(target=loghtningbug, args=(data, latch, clock))
+p = multiprocessing.Process(target=lightningbug, args=(data, latch, clock))
 p.start
 
 # while True:
