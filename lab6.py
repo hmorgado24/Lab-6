@@ -1,48 +1,32 @@
-from led8x8 import led
-from shiftR import Shifter
 import time
-import multiprocessing
 import random
+from led8x8 import led
+import multiprocessing
 
-def lbug(dataPin, latchPin, clockPin): #lighting bug "random walking" function
+def bug(dataPin, latchPin, clockPin): 
   row = random.randint(1, 8)
   col = random.randint(0, 7)
 
-  leddisp = led(data, latch, clock) #create an LED display obj that extends 8x8 class
+  leddisp = led(dataPin, latchPin, clockPin) 
 
   while True:
-    Rrow = random.randint(-1, 1) #change of x by one
-    Rcol = random.randint(-1, 1) #change of y by one 
+    Rrow = random.randint(-1, 1) 
+    Rcol = random.randint(-1, 1)  
 
-    led.display(row, col) #display initial random position
-    time.sleep(0.1) #requested time delay
+    leddisp.display(row, col)
+    time.sleep(0.1) 
 
-    if (row + Rrow < 0 or row + Rrow > 7):
-      row = row
+    if (row + Rrow < 1 or row + Rrow > 7): 
+      row = row 
     else:
-      row += Rrow
-    
-    if (col + Rcol < 0 or col + Rcol  > 7):
-      col = col
+      row += Rrow 
+
+    if (col + Rcol < 0 or col + Rcol > 7): 
+      col = col 
     else:
-      col += Rcol
+      col += Rcol 
 
+dataPin, latchPin, clockPin = 21, 19, 26 
 
-# def multiA():
-
-#   pat = multiprocessing.Array('i', 8)
-#   pat[0], pat[1], pat[2], pat[3], pat[4], pat[5], pat[6], pat[7] = 0b01111111, 0b10111111, 0b11011111, 0b11101111, 0b11110111, 0b11111011, 0b11111101, 0b11111110
-
-# multi = multiprocessing.Process(target=multiA)
-# multi.start
-
-data, latch, clock = 21, 19, 26
-p = multiprocessing.Process(target=lbug, args=(data, latch, clock))
-p.start()
-
-# while True:
-
-#   data, latch, clock = 21, 19, 26
-#   leddisp = led(data, latch, clock)
-  
-#   lightningbug(data, latch, clock)
+p = multiprocessing.Process(target=bug, args=(dataPin, latchPin, clockPin)) 
+p.start() 
