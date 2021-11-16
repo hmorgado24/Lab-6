@@ -38,7 +38,7 @@ multi.start
 
 while True:
 
-  dataPin, latchPin, clockPin = 21, 19, 26
-  leddisp = led(led.dataPin, led.latchPin, led.clockPin)
+  data, latch, clock = 21, 19, 26
+  leddisp = led(data, latch, clock)
   
   lightningbug(data, latch, clock)
