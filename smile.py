@@ -6,5 +6,5 @@ leddisp = LEDdisplay(data, latch, clock)
 
 while True:
   for n in range(8):
-    LEDdisplay.display(n)
+    LEDdisplay.leddisp.display(n)
     time.sleep(.001)
