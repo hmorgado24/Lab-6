@@ -10,7 +10,7 @@ def lightningbug(data, latch, clock):
   row = random.randint(0, 7)
   col = random.randint(0, 7)
 
-  
+  leddisp = led(data, latch, clock)
 
   while True:
     Rrow = random.randint(-1, 1)
