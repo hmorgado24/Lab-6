@@ -8,6 +8,5 @@ class led():
     self.shifter = Shifter(data, latch, clock)
  
   def display(self, r, c):
-       # change this value to pick which row the pattern appears on
-    self.shifter.shiftByte(Led8x8.numbers[c])  # load the row values
+    self.shifter.shiftByte(led.pat[c])  # load the row values
     self.shifter.shiftByte(1 << (r-1))   # select the given row
