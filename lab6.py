@@ -16,6 +16,7 @@ def lightningbug(data, latch, clock):
     Rrow = random.randint(-1, 1)
     Rcol = random.randint(-1, 1)
 
+    col = 1 
     led.display(row, col)
 
     if (row + Rrow < 0 or row + Rrow > 7):
