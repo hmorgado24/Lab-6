@@ -8,25 +8,25 @@ import random
 def lightningbug(data, latch, clock):
 
   row = random.randint(1, 8)
-  co = random.randint(0, 7)
+  col = random.randint(0, 7)
 
-  leddisp = led(data, latch, clock)
+  leddisp = led(row, col)
   time.sleep(.01)
-  
+
   while True:
     Rrow = random.randint(-1, 1)
     Rcol = random.randint(-1, 1)
     
-    led.display(row, co)
+    led.display(row, col)
     if (row + Rrow < 0 or row + Rrow > 7):
       row = row
     else:
       row += Rrow
     
-    if (co + Rcol < 0 or co + Rcol  > 7):
-      co = co
+    if (col + Rcol < 0 or col + Rcol  > 7):
+      col = col
     else:
-      co += Rcol
+      col += Rcol
 
 
 # def multiA():
