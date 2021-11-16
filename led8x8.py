@@ -7,6 +7,6 @@ class led():
   def __init__(self, data, latch, clock):
     self.shift = Shifter(data, latch, clock)
  
-  def display(self, r, c):
-    self.shift.shiftByte(led.pat[c])  # load the row values
-    self.shift.shiftByte(1 << (r-1))   # select the given row
+  def display(r, c):
+    Shifter.shiftByte(led.pat[c])  # load the row values
+    shifter.shiftByte(1 << (r-1))   # select the given row
