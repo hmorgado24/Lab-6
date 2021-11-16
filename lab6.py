@@ -7,8 +7,8 @@ import random
 
 def lightningbug(data, latch, clock):
 
-  row = random.randint(1,8)
-  col = random.randint(0,7)
+  row = random.randint(0, 7)
+  col = random.randint(0, 7)
 
   while True:
     Rrow = random.randint(-1, 1)
