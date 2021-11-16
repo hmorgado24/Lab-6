@@ -7,7 +7,7 @@ import random
 
 def lightningbug(data, latch, clock):
 
-  row = random.randint(0, 7)
+  row = random.randint(1, 8)
   co = random.randint(0, 7)
 
   leddisp = led(data, latch, clock)
