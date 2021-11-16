@@ -6,5 +6,5 @@ pins = LEDdisplay(data, latch, clock)
 
 while True:
   for n in range(8):
-    pins.LEDdisplay.display(n)
+    pins.display(n)
     time.sleep(.001)
