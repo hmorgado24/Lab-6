@@ -21,3 +21,4 @@ class LEDdisplay():
  
   def setNumber(self, num):  # display a given number
     self.Shifter.shiftByte(LEDdisplay.numbers[num])
+

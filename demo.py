@@ -1,4 +1,5 @@
 import time
+import RPi.GPIO as GPIO
 from led8x8 import LEDdisplay
 
 # Simple demonstration of the LEDdisplay class.
@@ -18,3 +19,5 @@ while True:
   for n in range(len(sequence)):
     theLEDdisplay.setNumber(sequence[n])
     time.sleep(0.4)
+
+GPIO.cleanup()
