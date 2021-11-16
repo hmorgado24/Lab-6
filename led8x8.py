@@ -9,4 +9,4 @@ class led():
  
   def display(r, c):
     Shifter.shiftByte(led.pat[c])  # load the row values
-    shifter.shiftByte(1 << (r-1))   # select the given row
+    Shifter.shiftByte(1 << (r-1))   # select the given row
