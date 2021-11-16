@@ -8,7 +8,7 @@ import random
 def lightningbug(data, latch, clock):
 
   row = random.randint(0, 7)
-  col = random.randint(0, 7)
+  co = random.randint(0, 7)
 
   leddisp = led(data, latch, clock)
 
@@ -16,16 +16,16 @@ def lightningbug(data, latch, clock):
     Rrow = random.randint(-1, 1)
     Rcol = random.randint(-1, 1)
     
-    led.display(row, col)
+    led.display(row, co)
     if (row + Rrow < 0 or row + Rrow > 7):
       row = row
     else:
       row += Rrow
     
-    if (col + Rcol < 0 or col + Rcol  > 7):
-      col = col
+    if (co + Rcol < 0 or co + Rcol  > 7):
+      co = co
     else:
-      col += Rcol
+      co += Rcol
     
     time.sleep(.01)
 
