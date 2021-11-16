@@ -8,5 +8,5 @@ class led():
     self.shifter = Shifter(data, latch, clock)
  
   def display( row, col):  # display a given number
-    self.shifter.shiftByte(led.pat[col])
-    self.shifter.shiftByte(1 << row)
+    shifter.shiftByte(led.pat[col])
+    shifter.shiftByte(1 << row)
