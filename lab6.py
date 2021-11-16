@@ -15,9 +15,8 @@ def lightningbug(data, latch, clock):
   while True:
     Rrow = random.randint(-1, 1)
     Rcol = random.randint(-1, 1)
-
-    col = 1 
-    led.display(row, 4)
+    
+    led.display(row, col)
     if (row + Rrow < 0 or row + Rrow > 7):
       row = row
     else:
@@ -38,9 +37,12 @@ def multiA():
 multi = multiprocessing.Process(target=multiA)
 multi.start
 
-while True:
+p = multiprocessing.Process(target=loghtningbug, args=(data, latch, clock))
+p.start
 
-  data, latch, clock = 21, 19, 26
-  leddisp = led(data, latch, clock)
+# while True:
+
+#   data, latch, clock = 21, 19, 26
+#   leddisp = led(data, latch, clock)
   
-  lightningbug(data, latch, clock)
+#   lightningbug(data, latch, clock)
