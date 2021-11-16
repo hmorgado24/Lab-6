@@ -4,20 +4,19 @@ import time
 import multiprocessing
 import random
 
-
-def lightningbug(data, latch, clock):
-
+def bug(dataPin, latchPin, clockPin): #lighting bug "random walking" function
   row = random.randint(1, 8)
   col = random.randint(0, 7)
 
-  leddisp = led(data, latch, clock)
+  leddisp = led(data, latch, clock) #create an LED display obj that extends 8x8 class
 
   while True:
-    Rrow = random.randint(-1, 1)
-    Rcol = random.randint(-1, 1)
-    
-    led.display(row, col)
-    time.sleep(.01)
+    Rrow = random.randint(-1, 1) #change of x by one
+    Rcol = random.randint(-1, 1) #change of y by one 
+
+    led.display(row, col) #display initial random position
+    time.sleep(0.1) #requested time delay
+
     if (row + Rrow < 0 or row + Rrow > 7):
       row = row
     else:
