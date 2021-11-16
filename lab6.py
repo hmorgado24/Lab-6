@@ -1,5 +1,5 @@
 from led8x8 import led
-from shiftregisterclass import Shifter
+from shiftR import Shifter
 import time
 import multiprocessing
 import random
