@@ -6,11 +6,11 @@ class LEDdisplay():
   pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001, 0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
   def __init__(self, data, latch, clock):
-    self.Shifter = Shifter(data, latch, clock)
+    self.shifter = Shifter(data, latch, clock)
  
   def display(self, row, col):  # display a given number
-    self.Shifter.shiftByte(LEDdisplay.pattern[col])
-    self.Shifter.shiftByte(1 << row)
+    self.shifter.shiftByte(LEDdisplay.pattern[col])
+    self.shifter.shiftByte(1 << row)
   
 data, latch, clock = 21, 19, 26
 pins = LEDdisplay(data, latch, clock)
