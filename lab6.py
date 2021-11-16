@@ -14,7 +14,7 @@ def lbug(dataPin, latchPin, clockPin): #lighting bug "random walking" function
     Rrow = random.randint(-1, 1) #change of x by one
     Rcol = random.randint(-1, 1) #change of y by one 
 
-    led.display(row, col) #display initial random position
+    led.display(row, col, col) #display initial random position
     time.sleep(0.1) #requested time delay
 
     if (row + Rrow < 0 or row + Rrow > 7):
