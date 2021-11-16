@@ -4,7 +4,7 @@ import time
 import multiprocessing
 import random
 
-def bug(dataPin, latchPin, clockPin): #lighting bug "random walking" function
+def lbug(dataPin, latchPin, clockPin): #lighting bug "random walking" function
   row = random.randint(1, 8)
   col = random.randint(0, 7)
 
@@ -37,7 +37,7 @@ def bug(dataPin, latchPin, clockPin): #lighting bug "random walking" function
 # multi.start
 
 data, latch, clock = 21, 19, 26
-p = multiprocessing.Process(target=lightningbug, args=(data, latch, clock))
+p = multiprocessing.Process(target=lbug, args=(data, latch, clock))
 p.start()
 
 # while True:
