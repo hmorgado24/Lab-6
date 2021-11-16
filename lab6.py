@@ -39,7 +39,7 @@ def lightningbug(data, latch, clock):
 
 data, latch, clock = 21, 19, 26
 p = multiprocessing.Process(target=lightningbug, args=(data, latch, clock))
-p.start
+p.start()
 
 # while True:
 
