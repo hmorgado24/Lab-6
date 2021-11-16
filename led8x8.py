@@ -3,7 +3,7 @@ import time
 
 class LEDdisplay():
 
-  pattern = [0b11111111, 0b00111100, 0b10100101, 0b10000001, 0b10100101, 0b10011001, 0b01111110, 0b00111100]
+  pattern = [0b01111111, 0b10111111, 0b11011111, 0b11101111, 0b11110111, 0b11111011, 0b11111101, 0b11111110]
 
   def __init__(self, data, latch, clock):
     self.shifter = Shifter(data, latch, clock)
