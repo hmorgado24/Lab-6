@@ -18,4 +18,4 @@ pins = LEDdisplay(data, latch, clock)
 while True:
   for n in range(8):
     pins.display(n, n)
-    time.sleep(.001)  
+    time.sleep(.01)  
