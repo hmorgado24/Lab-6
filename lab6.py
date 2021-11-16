@@ -1,5 +1,5 @@
 from led8x8 import led
-
+from shiftregisterclass import Shifter
 import time
 import multiprocessing
 import random
@@ -7,7 +7,7 @@ import random
 
 def lightningbug(data, latch, clock):
 
-  row = random.randint(0,7)
+  row = random.randint(1,8)
   col = random.randint(0,7)
 
   while True:
