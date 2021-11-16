@@ -29,13 +29,13 @@ def lightningbug(data, latch, clock):
     
     time.sleep(.01)
 
-def multiA():
+# def multiA():
 
-  pat = multiprocessing.Array('i', 8)
-  pat[0], pat[1], pat[2], pat[3], pat[4], pat[5], pat[6], pat[7] = 0b01111111, 0b10111111, 0b11011111, 0b11101111, 0b11110111, 0b11111011, 0b11111101, 0b11111110
+#   pat = multiprocessing.Array('i', 8)
+#   pat[0], pat[1], pat[2], pat[3], pat[4], pat[5], pat[6], pat[7] = 0b01111111, 0b10111111, 0b11011111, 0b11101111, 0b11110111, 0b11111011, 0b11111101, 0b11111110
 
-multi = multiprocessing.Process(target=multiA)
-multi.start
+# multi = multiprocessing.Process(target=multiA)
+# multi.start
 
 data, latch, clock = 21, 19, 26
 p = multiprocessing.Process(target=lightningbug, args=(data, latch, clock))
