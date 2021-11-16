@@ -10,7 +10,7 @@ class LEDdisplay():
  
   def display(self, row, col):  # display a given number
     self.Shifter.shiftByte(LEDdisplay.pattern[col])
-    self.Shifter.shiftByte(LEDdisplay(1 << row))
+    self.Shifter.shiftByte(1 << row)
   
 data, latch, clock = 21, 19, 26
 pins = LEDdisplay(data, latch, clock)
@@ -18,4 +18,4 @@ pins = LEDdisplay(data, latch, clock)
 while True:
   for n in range(8):
     pins.display(n, n)
-    time.sleep(.001)
+    time.sleep(.001)  
