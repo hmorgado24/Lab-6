@@ -16,7 +16,7 @@ def bug(dataPin, latchPin, clockPin):
     leddisp.display(row, col)
     time.sleep(0.1) 
 
-    if (row + Rrow < 1 or row + Rrow > 7): 
+    if (row + Rrow < 0 or row + Rrow > 7): 
       row = row 
     else:
       row += Rrow 
