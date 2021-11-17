@@ -4,7 +4,7 @@ from led8x8 import led
 import multiprocessing
 
 def bug(dataPin, latchPin, clockPin): 
-  row = random.randint(1, 8)
+  row = random.randint(0, 7)
   col = random.randint(0, 7)
 
   leddisp = led(dataPin, latchPin, clockPin) 

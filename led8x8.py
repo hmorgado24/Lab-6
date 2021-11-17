@@ -17,5 +17,5 @@ class led():
  
   def display(self, r, c):
     self.shifter.shiftByte(led.pat[c])  
-    self.shifter.shiftByte(1 << (r-1))   
+    self.shifter.shiftByte(1 << r)   
       
