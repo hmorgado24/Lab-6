@@ -3,11 +3,11 @@ import random
 from led8x8 import led
 import multiprocessing
 
-def bug(dataPin, latchPin, clockPin): 
+def lightningbug(data, latch, clock): 
   row = random.randint(0, 7)
   col = random.randint(0, 7)
 
-  leddisp = led(dataPin, latchPin, clockPin) 
+  leddisp = led(data, latch, clock) 
 
   while True:
     Rrow = random.randint(-1, 1) 
@@ -26,7 +26,7 @@ def bug(dataPin, latchPin, clockPin):
     else:
       col += Rcol 
 
-dataPin, latchPin, clockPin = 21, 19, 26 
+data, latch, clock = 21, 19, 26 
 
-p = multiprocessing.Process(target=bug, args=(dataPin, latchPin, clockPin)) 
+p = multiprocessing.Process(target=lightningbug, args=(data, latch, clock)) 
 p.start() 
